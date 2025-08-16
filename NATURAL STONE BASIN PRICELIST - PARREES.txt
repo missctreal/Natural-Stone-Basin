@@ -1,0 +1,157 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  :root{
+    --bg:#044955;
+    --panel:#231f1e;
+    --accent:#f06d25;
+    --grid:#044955;
+    --note-bg:#e9f7ef;
+  }
+  body{
+    font-family: Verdana, sans-serif;
+    margin:20px;
+    background-color:var(--bg);
+  }
+  .container{
+    background-color:var(--panel);
+    padding:16px;
+    border-radius:8px;
+    box-shadow:0 2px 4px rgba(0,0,0,.1);
+  }
+
+
+  /* Header: logo + title on one row, compact spacing */
+  .header{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    margin-bottom:8px;      /* smaller header area */
+  }
+  .logo{
+    width:120px;            /* tweak as needed */
+    height:auto;
+    display:block;
+  }
+  .title{
+    flex:1;
+    text-align:center;
+    color:var(--accent);
+    font-size:24px;
+    line-height:1.2;
+    margin:0;               /* remove extra space */
+  }
+
+
+  .table-container{
+    overflow-x:auto;
+    max-height:500px;
+    overflow-y:auto;
+    border:0 solid var(--bg);
+    border-radius:5px;
+    background:#fff;        /* ensures white behind table */
+  }
+  table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+    background:#fff;        /* table base white */
+  }
+  th, td{
+    border:1px solid var(--grid);
+    padding:10px;
+    text-align:left;
+    color:#000;
+  }
+  th{
+    background-color:var(--bg);
+    color:var(--accent);
+    position:sticky;
+    top:0;
+    z-index:2;
+  }
+
+
+  /* Force ALL body rows to white (no striping) */
+  tbody tr{ background:#fff !important; }
+  /* Remove any previous striping */
+  /* tr:nth-child(even){ background:unset; } */
+
+
+  .notes{
+    margin-top:18px;
+    padding:15px;
+    background-color:var(--note-bg);
+    border-left:5px solid #4CAF50;
+    color:#333;
+  }
+  .notes h3{ margin:0 0 6px 0; color:#000; }
+</style>
+</head>
+<body>
+
+
+<div class="container">
+  <div class="header">
+    <!-- Make sure Logo.jpg is in the same folder as this HTML file -->
+    <img src="https://drive.google.com/file/d/1cF_OZAiDvH6_EZVEcwel6oZGhEpiOVUj" alt="Logo" class="logo">
+    <h1 class="title">NATURAL STONE BASIN PRICELIST - PARREES</h1>
+  </div>
+
+
+  <div class="table-container">
+    <!-- your table stays the same; only CSS changed behavior -->
+    <!-- BEGIN TABLE -->
+    <table>
+      <thead>
+        <tr>
+          <th>CODE NO</th>
+          <th>PICTURE</th>
+          <th>STONE NAME</th>
+          <th>SIZE (CM) LXBXH</th>
+          <th>PRICE</th>
+        </tr>
+      </thead>
+    <tbody>
+      <tr>
+        <td>58</td>
+        <td><img src="https://drive.google.com/file/d/19HHdGBQMatmlHzJTSnNq4b-YL59JUdcc" alt="images/58" class="images/58"></td>
+        <td>GREEN ONYX</td>
+        <td>22"18"X34"</td>
+        <td>130,000</td>
+      </tr>
+      <tr>
+        <td>59</td>
+        <td><img src="https://drive.google.com/file/d/1ENrqvaShCE3kDSp7w0dgnA72D3NN4vtt" alt="images/59" class="images/59"></td>
+        <td>INDIAN PANDA</td>
+        <td>16"X16"X34"</td>
+        <td>64,000</td>
+      </tr>
+      <tr>
+        <td>60</td>
+        <td><img src="https://drive.google.com/file/d/1gsLgtvakC4u_zYv3ueqCklR5vND5aPwa" alt="images/60" class="images/60"></td>
+        <td>BHENSLANA BLACK</td>
+        <td>18"X18"X34"</td>
+        <td>60,000</td>
+      </tr>
+    </tbody>
+    </table>
+    <!-- END TABLE -->
+  </div>
+
+
+  <div class="notes">
+    <h3>Notes:</h3>
+    <ul>
+      <li>Net Price, Ex Factory, Pune</li>
+      <li>18% GST Extra</li>
+      <li>The Actual Product Might Differ From The Image Being A Natural Stone</li>
+    </ul>
+  </div>
+</div>
+
+
+</body>
+</html>
